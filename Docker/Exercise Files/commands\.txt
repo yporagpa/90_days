@@ -1,0 +1,53 @@
+$docker images - view images
+
+$docker ps - show containers
+  - -a - see all
+  - -l - see last exited container 
+  
+$docker run <image>:<tag> <process to run> - start container
+  - -ti - terminal interactive
+  - --rm - delete container on exit
+  - -d - create detached container
+
+$exit or ^+D  - while in container - exit container
+
+------------------------------------------------------------------
+ 
+$docker attach <container_name> - connect to running image
+
+$ ^+P + ^+Q while in container - detach and keep running
+ 
+$docker exec <container_name> <process to run> - 
+run an additional process in an existing image
+
+------------------------------------------------------------------
+
+$docker logs <container_name>
+
+$docker kill <container_name> - stop a container
+
+$docker rm <container-name> - stop and delete a container
+
+------------------------------------------------------------------
+
+*Resource Constraints*
+
+$ docker run 
+  - --memory <maximum allowed memory>
+  - --cpu-shares <relative cpu  to other containers>
+  - --cpu-quota <hard limit on cpu>
+  
+------------------------------------------------------------------
+
+*Exposing Ports*
+
+$docker run
+  - p <internal_port_number>:*<external_port_number>/<**tcp/udp> - publish
+   *external port is optional, and can be chosen dinamically. make sure to name connection
+   **tcp by default
+
+
+
+
+
+
